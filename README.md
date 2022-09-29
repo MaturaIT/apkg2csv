@@ -16,7 +16,12 @@ copy .apkg file to project's root and run
 python src/run.py {filename}.apkg
 ```
 
-it will output {filename}.apkg.csv
+it will output {filename}.csv
+
+If you want to convert all .apkg files in specific directory please run:
+```python
+python src/manage.py {directory}
+```
 
 ## Tests
 

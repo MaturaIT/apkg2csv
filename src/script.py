@@ -46,13 +46,13 @@ def save_to_csv(csv_file):
     try:
         with open(csv_file, "w") as f:
             tempfile = connect("tempfile")
-            f.write("#|#".join(header(tempfile)))
-            f.write("\n")
+            # f.write("#|#".join(header(tempfile)))
+            # f.write("\n")
             for i in values(tempfile):
                 if "This file requires a newer version of Anki." in i:
                     print(csv_file, "This file requires a newer version of Anki.")
                     break
-                f.write("#|#".join([x.replace("\n", "<br>") for x in i]))
+                f.write("|".join([x.replace("\n", "<br>") for x in i]))
                 f.write("\n")
 
     except Exception as e:
